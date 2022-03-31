@@ -1,0 +1,56 @@
+@media (max-width: 1000px) { 
+
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    p, a, h1 {
+        font-size: 15px;
+    }
+
+    .textwindow {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .head {
+        padding-top: 10px;
+        height: 20px;
+    }
+
+    .ateg {
+        margin: 10px;
+    }
+
+    .ateg::after{
+        height: 1.5px;
+    }
+
+    .ges {
+        font-size: 25px;
+        padding-right: 5px;
+    }
+
+    .gamebox {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .line {
+        padding: 25px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .block {
+        width: 50px;
+        height: 50px;
+        border: 3px solid black;
+        border-radius: 13px;
+    }
+
+}
