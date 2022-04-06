@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="back.css">
         <link rel="stylesheet" href="mobile.css">
+        <!-- импорт для анимации на первой кнопке -->
+        <link rel="stylesheet" href="../game/2048/2048.css">
+        <!-- импорт для анимации на первой кнопке -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +32,7 @@
             </div>
             <div class="gamebox">
                 <div class="line">
-                    <div class="block" id="gamewindow1" onclick="window.location.href = '../game/2048/2048.html'"></div>
+                    <div class="block" id="gamewindow1" onclick="window.location.href = '../game/2048/2048.html'">2</div>
                     <div class="block" id="gamewindow2" onclick="window.location.href = '../game/TicTacToe/index.html'"></div>
                     <div class="block" id="gamewindow3" onclick="window.location.href = '#'"></div>
                     <div class="block" id="gamewindow4" onclick="window.location.href = '#'"></div>
@@ -40,5 +43,6 @@
         <footer class="footer">
             <p class="footertext">тут оставим наши ссылки и напишим что-то умное</p>
         </footer>
+        <script src="../src/index.js"></script>
     </body>
 </html>

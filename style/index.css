@@ -93,6 +93,13 @@ p, a, h1 {
     height: 100px;
     border: 5px solid black;
     border-radius: 15px;
+    font-family: 'Red Hat Mono', monospace;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .footer {
