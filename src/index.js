@@ -62,4 +62,17 @@ xORo();
 const canvastb = document.getElementById('snake'); 
 const gtk = canvastb.getContext("2d");
 gtk.fillStyle = "red";
-gtk.fillRect(10, 10, 20, 20);
+let we = 40;
+let he = 40;
+
+function draw() {
+    if (he <= 320 && we <= 320) he += 10;
+    else if (he >= 320 && we <= 320) we += 10;
+    else if (he >= 50) he -= 10;
+    else if (he <= 320 && we >= 320) we -=10;
+    gtk.clearRect(0, 0, 400, 400);
+    gtk.fillRect( we, he, 35, 35);
+}
+
+setInterval(draw, 10);
+
