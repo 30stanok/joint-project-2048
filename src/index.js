@@ -60,3 +60,6 @@ xORo();
 //      обработка канваса со змейкой
 
 const canvastb = document.getElementById('snake'); 
+const gtk = canvastb.getContext("2d");
+gtk.fillStyle = "red";
+gtk.fillRect(10, 10, 20, 20);
