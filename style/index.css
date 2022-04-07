@@ -102,6 +102,16 @@ p, a, h1 {
     font-weight: bold;
 }
 
+.classfortictac {
+    width: 100%;
+    height: 100%;
+}
+
+.canvas {
+    width: 100%;
+    height: 100%;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
