@@ -8,12 +8,14 @@ const  btnClose = document.getElementById('btn-close');
 
 area.addEventListener('click', e => {
     if(e.target.className = 'box') {
-        if( move % 2 === 0) {
-            e.target.innerHTML = "X"
-        } else {
-            e.target.innerHTML = "O"
+        if(e.target.innerHTML == ""){
+            if( move % 2 === 0) {
+                e.target.innerHTML = "X"
+            } else {
+                e.target.innerHTML = "O"
+            }
+            move++;
         }
-        move++;
         check();
     }
 })
@@ -40,9 +42,7 @@ const check = () => {
             result = 'нолики';
             prepareResult(result);
         }
-        console.log(boxes[i])
     }
-    
 }
 
 
