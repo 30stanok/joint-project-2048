@@ -64,15 +64,37 @@ const gtk = canvastb.getContext("2d");
 gtk.fillStyle = "red";
 let we = 40;
 let he = 40;
-
-function draw() {
-    if (he <= 320 && we <= 320) he += 10;
-    else if (he >= 320 && we <= 320) we += 10;
-    else if (he >= 50) he -= 10;
-    else if (he <= 320 && we >= 320) we -=10;
-    gtk.clearRect(0, 0, 400, 400);
+let count = 0;
+let safecord = [40 , 40];
+function draw(we, he) {
+    //if (he <= 320 && we <= 320) he += 10;
+    //else if (he >= 320 && we <= 320) we += 10;
+    //else if (he >= 50) he -= 10;
+    //else if (he <= 320 && we >= 320) we -=10;
+    //gtk.clearRect(0, 0, 400, 400);
+    //gtk.fillRect( we, he, 35, 35);
+    
+    if (count == 0) {
+        if (we == 320) count = 1;
+        we += 10;
+        console.log(we);
+    } else if (count == 1) {
+        if (he == 320) count = 2;
+        he += 10;
+    } else if (count == 2) {
+        if (we == 40) count = 3;
+        we -= 10;
+    } else if (count == 3) {
+        if (he == 40) count = 0;
+        he -= 10;
+    }
     gtk.fillRect( we, he, 35, 35);
+    return [we, he];
 }
 
-setInterval(draw, 10);
+setInterval(() => {
+    gtk.clearRect(0, 0, 400, 400);
+    safecord = draw(safecord[0], safecord[1]);
+    console.log(safecord);
+}, 20);
 
